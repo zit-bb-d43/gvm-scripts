@@ -24,7 +24,7 @@ def main(gmp: Gmp, args: Namespace) -> None:
     print('alert_id: '.join(task.xpath('alert/@id')))
     print('alert_name: '.join(task.xpath('alert/name/text()')))
     # report_count finished (durchgelaufene Tasks)
-    print('finished_count: '.join(task.xpath('report_count/finished/text()')))(filter_string="name~^zit rows=-1"
+    print('finished_count: '.join(task.xpath('report_count/finished/text()')))
     print('last_run: '.join(task.xpath('last_report/report/scan_end/text()')))
     # max_checks and max_hosts
     print('max_checks: '.join(task.xpath('preferences/preference/scanner_name[contains(., "max_checks")]/../value/text()')))
