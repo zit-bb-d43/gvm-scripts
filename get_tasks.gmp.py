@@ -4,7 +4,7 @@ from gvm.protocols.gmp import Gmp
 
 
 def main(gmp: Gmp, args: Namespace) -> None:
-  tasks = gmp.get_tasks(filter_string="name~zit_ rows=-1").xpath('tasks')
+  tasks = gmp.get_tasks(filter_string="name~zit_ rows=-1").xpath('task')
   for task in tasks:
     print('id: '.join(task.xpath('./@id')))
     print('name: '.join(task.xpath('name/text()')))
