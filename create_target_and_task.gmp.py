@@ -133,7 +133,7 @@ def create_target_and_task(gmp, urllist, existing_targets, existing_tasks):
         print(f"create task with target {url}")
         task = create_task(gmp,url,target_id)
         if(task.xpath('./@status')[0]=='201'):
-          print(f"task for {url} created with id {task.xpath('/@id')[0]}")
+          print(f"task for {url} created with id {task.xpath('./@id')[0]}")
         else:
           print(f"error: create_task for {url} failed")
           pretty_print(task)
