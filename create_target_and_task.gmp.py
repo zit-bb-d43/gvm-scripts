@@ -108,9 +108,9 @@ def create_task(gmp, url, target_id):
 
 def create_target_and_task(gmp, urllist, existing_targets, existing_tasks):
   """
-  takes an url from urllist and checks, if ther's already an existing target. 
+  takes an url from urllist and checks, if ther's already an existing target.
   If yes, it checks if there a existsting task. if target ex. but no task, a task will be created
-  If not, it creates a target and a task. 
+  If not, it creates a target and a task.
 
   That's the idea.
   """
@@ -132,7 +132,7 @@ def create_target_and_task(gmp, urllist, existing_targets, existing_tasks):
         print(f"target for {url} with id {target_id} created.")
         print(f"create task with target {url}")
         task = create_task(gmp,url,target_id)
-        if(task.xpath('/@status')[0]=='201'):
+        if(task.xpath('./@status')[0]=='201'):
           print(f"task for {url} created with id {task.xpath('/@id')[0]}")
         else:
           print(f"error: create_task for {url} failed")
