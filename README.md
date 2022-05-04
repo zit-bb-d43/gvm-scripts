@@ -18,3 +18,5 @@ gvm-script socket create_target_and_task.gmp.py urllist
 /opt/gvm/.local/bin/gvm-script socket /opt/gvm/gvm-scripts/start_task.gmp.py
 
 ```
+
+for resolve forwardings and redirects in urls, see https://github.com/zit-bb-d43/redEagleMite
